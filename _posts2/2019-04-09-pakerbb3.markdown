@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: post1
 ---
 <img src="{{ site.baseurl }}/images/pic03.jpg">
 준 ???? 중 . . .
