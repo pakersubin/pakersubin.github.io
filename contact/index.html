@@ -4,7 +4,7 @@ layout: default
 
 <section id="one" >
     <div class="container">
-        {% for post in site.post2 limit:1 %}
+        {% for post in site.posts2 limit:1 %}
             <article>
                 <header>
                     <h2><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h2>
@@ -24,7 +24,7 @@ layout: default
 <section>
     <div class="container">
         <div class="features">
-        {% for postss in site.post2 offset:1 %}
+        {% for post in site.posts2 offset:1 %}
             <article>
                 <section class="excerpt">
                 <header>
