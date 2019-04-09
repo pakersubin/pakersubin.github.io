@@ -1,36 +1,46 @@
 ---
-title: Contact Me
 layout: default
 ---
-<!-- 
-<section id="one">
+
+<section id="one" >
     <div class="container">
-        <h3>Contact Me</h3>
-        <p>Integer eu ante ornare amet commetus vestibulum blandit integer in curae ac faucibus integer non. Adipiscing cubilia elementum integer. Integer eu ante ornare amet commetus.</p>
-        <form method="post" action="#">
-            <div class="row uniform">
-                <div class="6u 12u(xsmall)"><input type="text" name="name" id="name" placeholder="Name" /></div>
-                <div class="6u 12u(xsmall)"><input type="email" name="email" id="email" placeholder="Email" /></div>
-            </div>
-            <div class="row uniform">
-                <div class="12u"><input type="text" name="subject" id="subject" placeholder="Subject" /></div>
-            </div>
-            <div class="row uniform">
-                <div class="12u"><textarea name="message" id="message" placeholder="Message" rows="6"></textarea></div>
-            </div>
-            <div class="row uniform">
-                <div class="12u">
+        {% for post in site.posts limit:1 %}
+            <article>
+                <header>
+                    <h2><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h2>
+                </header>
+                <section class="post-content">
+                    {{ post.excerpt }}
+                </section>
+                <section class="special">
                     <ul class="actions">
-                        <li><input type="submit" class="special" value="Send Message" /></li>
-                        <li><input type="reset" value="Reset Form" /></li>
+                        <li><a href="{{ site.baseurl }}{{ post.url }}" class="button special">Read More</a></li>
                     </ul>
-                </div>
-            </div>
-        </form>
+                </section>
+            </article>
+        {% endfor %}
     </div>
-</section> -->
-<section id="one">
-        <div class="container">
-                <h3>준비중 . . .</h3>  
+</section>
+<section>
+    <div class="container">
+        <div class="features">
+        {% for post in site.posts offset:1 %}
+            <article>
+                <section class="excerpt">
+                <header>
+                    <h3><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h3>
+                </header>
+                
+                    {{ post.content | truncatewords: 30 }}
+                </section>
+                <footer>
+                    <ul class="actions">
+                        <li><a href="{{ site.baseurl }}{{ post.url }}" class="button">Read More</a></li>
+                    </ul>
+                </footer>
+                <div class="clear"></div>
+            </article>
+        {% endfor %}
         </div>
+    </div>
 </section>
