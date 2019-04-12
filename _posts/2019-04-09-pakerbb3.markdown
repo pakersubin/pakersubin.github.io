@@ -1,5 +1,8 @@
 ---
 layout: post
+title:  "2019-04-11-pakerbb2"
+date:   2019-04-11 14:37:44
+categories: update
 ---
 <img src="{{ site.baseurl }}/images/pic03.jpg">
 준 비 중 . . .
