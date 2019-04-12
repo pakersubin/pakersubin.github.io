@@ -12,3 +12,5 @@ github_username:  jekyll
 disqus-shortname: pakersubin
 # Build settings
 markdown: kramdown
+google_analytics:
+  ua: 'UA-138224498-1'
