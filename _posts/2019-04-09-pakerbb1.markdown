@@ -4,7 +4,7 @@ title:  "ELK란 무엇인가 ?"
 date:   2019-04-12 13:44:40
 categories: update
 ---
-<img width="300" height="250" src="{{ site.baseurl }}/images/elasticsearch.png">
+<img src="{{ site.baseurl }}/images/pic02.jpg">
 
 현재 4차산업시대에서 데이터는 가장 중요한 자산중 하나로 손꼽힌다. 
 
@@ -13,12 +13,12 @@ categories: update
 ELK는 위 그림과 같이, 분석 및 저장 기능을 담당하는 ElasticSearch, 수집 기능을 하는 Logstash, 이를 시각화하는 도구인 Kibana의 앞글자만 딴 단어이다. ELK는 접근성과 용이성이 좋아 최근 가장 핫한 Log 및 데이터 분석 도구이다.
 
 1) ElasticSearch 
-<img width="100" height="250" src="{{ site.baseurl }}/images/elasticsearch.png">
+<img  src="{{ site.baseurl }}/images/pic02.jpg">
 
 
 - ElasticSearch는 Lucene 기반으로 개발한 분산 검색엔진으로, Logstash를 통해 수신된 데이터를 저장소에 저장하는 역할을 담당
 
-- <img width="100" height="250" src="{{ site.baseurl }}/images/elasticsearch.png">
+- <img src="{{ site.baseurl }}/images/pic02.jpg">
 
 - 데이터를 중심부에 저장하여 예상되는 항목을 검색하고 예상치 못한 항목을 밝혀낼 수 있다.
 
