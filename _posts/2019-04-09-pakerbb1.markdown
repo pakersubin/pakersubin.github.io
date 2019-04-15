@@ -17,6 +17,7 @@ ELK는 분석 및 저장 기능을 담당하는 ElasticSearch, 수집 기능을 
 국내에서는 삼성 SDS , POSCO , NAVER , 쿠팡등 다양한 기업에서 로깅 및 검색엔진 또는 chatbot으로 활용중입니다.
 
 Elasticsearch는 공식 홈페이지의 Docs도 매우 잘 되어있어서 자료를 찾아보기에는 수월한것 같습니다.
+-https://www.elastic.co/kr/
 
 공식적으로 Elasticsearch는 A Distributed RESTful Search Engine 라고 설명하고 있습니다. 분산환경에서 RESTful API를 지원하는 검색 엔진이며 ,
 루씬을 기반으로한 검색엔진을 사용하고, 대용량 데이터를 처리하는데 적합하며 준실시간으로 데이터를 저장하고 검색, 분석할 수 있습니다.
@@ -44,6 +45,8 @@ Elasticsearch는 공식 홈페이지의 Docs도 매우 잘 되어있어서 자�
 (* 다양한 타입과 인덱스로 구성이 된다고 했지만 6.x 버전 이후로는 하나의 Index 하나의 Type입니다.)
 
 * 용어 정리
+    - <img src="{{ site.baseurl }}/images/stru.jpg">
+    - <img src="{{ site.baseurl }}/images/ela_rdb.png">
     - 인덱스 (INDEX)
         + 인덱스는 단일 타입의 도큐먼트를 저장하고 관리하는 컨테이너입니다. 인덱스는 여러개의 타입을 가질 수 있고, 인덱스는 타입을 포함한 논리적 컨테이너 입니다.
         + RDB의 데이터베이스와 유사합니다
