@@ -1,0 +1,37 @@
+---
+layout: post
+title:  "ELK - Elasticsearch란 무엇인가? - 2"
+date:   2019-04-18 10:50:00
+categories: update
+---
+<img src="{{ site.baseurl }}/images/elastic.jpg">
+
+오늘은 ElasticSearch 설치방법에 대해서 알아보도록 하겠습니다.
+
+-https://www.elastic.co/kr/downloads/elasticsearch
+
+* 설치 과정
+    - Elasticsearch 공식 홈페이지에서 버전을 선택 한 후 압축을 해제 합니다. 저는 6.XX 버전으로 다운을 받았습니다. 혹시 java가 설치되어 있지 않거나 버전이 1.8 미만 버전이라면 설치를 꼭 해주시길 바랍니다.
+    - 설치 후 elasticsearch 디렉토리의 config/elasticsearch.yml 파일을 vi 편집기로 열면 됩니다.
+    - <img src="{{ site.baseurl }}/images/yml.png">
+        + 아래는 기본적으로 검토할만한 옵션입니다. 
+        + cluster.name
+        + node.name
+        + path.data
+        + path.log
+        + network.host
+        + http.port
+* 구동
+    - elasticsearch 디렉토리의 bin밑에 ./elasticsearch 실행
+    - <img src="{{ site.baseurl }}/images/start.png">
+    - 백그라운드 구동시 nohup ./bin/elasticsearch &\
+    - localhost:9200 
+    - <img src="{{ site.baseurl }}/images/9200.png">
+
+* 정지
+    - ps -ef | grep -v grep | grep elasticsearch | awk '{ print $2 }' 
+    - 위에서 나온 응답 프로세스 id 통해 kill {프로세스 아이디} 
+
+    이걸로 간단한 Elasticsearch 설치 및 구동 / 정지에 대해서 배웠습니다.
+
+    다음 글에서는 조작하는 방법에 대해 포스팅 하겠습니다.
