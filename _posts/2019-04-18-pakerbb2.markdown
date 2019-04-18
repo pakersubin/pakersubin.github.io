@@ -9,8 +9,9 @@ categories: update
 Create Index 인덱스 생성 방법입니다.
 
 PUT http://localhost:9200/<사용할 Index Name>
-    - <img src="{{ site.baseurl }}/images/1.png">
-    - <img src="{{ site.baseurl }}/images/2.png">
-위와 같은 응답이 온다면 정상적으로 Index가 생성이 되었고 , 자신이 생성한 Index를 확인하기 위해서 GET http://localhost:9200/_cat/indices?v&pretty 요청을 합니다. 
-    - <img src="{{ site.baseurl }}/images/3.png">
+<img src="{{ site.baseurl }}/images/1.png">
+ <img src="{{ site.baseurl }}/images/2.png">
+위와 같은 응답이 온다면 정상적으로 Index가 생성이 되었고 자신이 생성한 Index를 확인하기 <br/>
+위해서 GET http://localhost:9200/_cat/indices?v&pretty 요청을 합니다. 
+<img src="{{ site.baseurl }}/images/3.png">
 저는 Index Name을 pakerbb로 설정을 하였고 , 정상적으로 만들어 진것을 확인 할 수 있습니다.
