@@ -8,6 +8,7 @@ categories: update
 
 Create Index 인덱스 생성 방법입니다.
 
+Index는 미리 만들지 않아도 데이터를 입력한다면 자동으로 생성이 되도록 되어있습니다. 참고!
 PUT http://localhost:9200/사용할 Index Name
 
 <img src="{{ site.baseurl }}/images/1.png">
@@ -19,3 +20,39 @@ PUT http://localhost:9200/사용할 Index Name
 
 <img src="{{ site.baseurl }}/images/3.png">
 저는 Index Name을 pakerbb로 설정을 하였고 , 정상적으로 만들어 진것을 확인 할 수 있습니다.
+
+이제 Index Mapping 정보를 생성 할 거에요.  Mapping은 데이터의 저장형태와 검색엔진에서 접근하고 처리하기 위한 명세입니다.
+RDBMS의 스키마와 같은 맥락으로 보시면 더 이해하기 쉬울 것 같습니다.
+  { “Mappings “ :
+         { “<타입명>”:
+                {“<내장필드명>”} :
+                         {“<필드내용>"}
+                 ………….
+         }
+  }
+
+Mapping은 위와 같은 형태를 가지고 있습니다. 또 Mapping의 특징 중 하나는 필드 구성을 별도로 하지 않더라도 동적 Mapping을 통해 자동으로 데이터 타입과 문서가 저장이 됩니다.
+
+<img src="{{ site.baseurl }}/images/4.png">
+
+<img src="{{ site.baseurl }}/images/5.png">
+
+TYPE에 정의된 Mapping은 Document를 생성하는 규약이므로 실제 정의된 것대로 Document를 생성해야합니다.
+
+Mapping 생성 방법 : PUT http://localhost/pakerbb/_mapping/subin_test
+Body :      
+{"properties" : {
+    "name" : {
+      "type" : "text"
+    },
+      "job" : {
+        "type" : "text"
+      }
+    }
+  }
+
+  위와 같이 요청하면 "acknowledged": true 응답값을 받을 수 있습니다. 
+
+
+
+
